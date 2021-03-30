@@ -1,0 +1,9 @@
+#Vladimir Cvjetkovic
+### App cron config
+# chmod +x for every new script
+
+# Check Wildfly active status every half hour & restart if dead
+*/30 * * * * /restart_wildfly_if_dead.sh
+
+# Dump Postgres every 1st day of month at 00:00
+0 0 1 * * /postgres_dump.sh
